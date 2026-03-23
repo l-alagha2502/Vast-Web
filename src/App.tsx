@@ -872,7 +872,7 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       url={url}
       position={position}
       rotation={rotation}
-      scale={hovered ? 1.2 : 1}
+      scale={hovered ? 1.15 : 1}
       transparent
       toneMapped={false}
       onClick={() => console.log("Easter Egg: Image Node Activated")}
