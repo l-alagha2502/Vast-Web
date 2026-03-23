@@ -845,7 +845,7 @@ function ImageGallery3D({ images }: { images: string[] }) {
     <group>
       {images.map((url, i) => {
         const angle = (i / images.length) * Math.PI * 2;
-        const radius = 8;
+        const radius = 11;
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
         
@@ -872,7 +872,7 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       url={url}
       position={position}
       rotation={rotation}
-      scale={hovered ? 1.2 : 1}
+      scale={hovered ? 1.15 : 1}
       transparent
       toneMapped={false}
       onClick={() => console.log("Easter Egg: Image Node Activated")}
@@ -880,8 +880,8 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       onPointerOut={() => setHovered(false)}
       // The Image component handles aspect ratio and cropping automatically
       // to fit the scale provided.
-      width={4}
-      height={5}
+      width={6}
+      height={7.5}
     />
   );
 }
