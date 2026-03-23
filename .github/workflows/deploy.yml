@@ -15,7 +15,10 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build
+      - name: Build with Secrets
+        run: npm run build
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # This injects your key!
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
