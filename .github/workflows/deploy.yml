@@ -14,11 +14,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      
+      # The magic line that ignores the dependency conflict:
       - run: npm install --legacy-peer-deps
+
       - name: Build with Secrets
-        run: npm run build
+        # We add the --emptyOutDir flag just to be safe
+        run: npx vite build
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # This injects your key!
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
