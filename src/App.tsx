@@ -553,7 +553,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-6 justify-center">
-            <MagneticButton className="px-10 py-5 bg-vast-accent text-vast-black rounded-none font-sans font-semibold text-sm uppercase tracking-widest hover:bg-white transition-colors duration-500">
+            <MagneticButton className="px-10 py-5 bg-vast-accent text-vast-black rounded-none font-sans font-semibold text-sm uppercase tracking-widest hover:bg-white transition-colors duration-500" onClick={() => window.open("https://discord.gg/CcEFeHw9MN", "_blank", "noopener,noreferrer")}>
               JOIN THE COMMUNITY
             </MagneticButton>
           </div>
@@ -805,7 +805,7 @@ const VastHall3D = () => {
       </div>
 
       <div className="w-full h-screen relative cursor-grab active:cursor-grabbing">
-        <Canvas shadows camera={{ position: [0, 0, 20], fov: 45 }}>
+        <Canvas shadows camera={{ position: [0, 0, 32], fov: 50 }}>
           <ambientLight intensity={1.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={15} color="#ffffff" />
           <pointLight position={[-10, -10, -10]} intensity={5} />
@@ -845,7 +845,7 @@ function ImageGallery3D({ images }: { images: string[] }) {
     <group>
       {images.map((url, i) => {
         const angle = (i / images.length) * Math.PI * 2;
-        const radius = 11;
+        const radius = 14;
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
         
@@ -880,8 +880,8 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       onPointerOut={() => setHovered(false)}
       // The Image component handles aspect ratio and cropping automatically
       // to fit the scale provided.
-      width={6}
-      height={7.5}
+      width={10}
+      height={12}
     />
   );
 }
@@ -1199,9 +1199,9 @@ const Footer = ({ setShowOverride, showOverride }: { setShowOverride: (v: boolea
             <div className="flex flex-row gap-4 items-center">
               <span className="font-mono text-[8px] uppercase tracking-widest opacity-40">Social:</span>
               <div className="flex flex-row gap-3 font-display text-xs uppercase tracking-tight">
-                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => console.log("IG")}><Instagram size={16} /></MagneticButton>
-                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => console.log("DC")}><MessageSquare size={16} /></MagneticButton>
-                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => console.log("YT")}><Youtube size={16} /></MagneticButton>
+                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => window.open("https://www.instagram.com/vast.qa/", "_blank", "noopener,noreferrer")}><Instagram size={16} /></MagneticButton>
+                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => window.open("https://discord.gg/CcEFeHw9MN", "_blank", "noopener,noreferrer")}><MessageSquare size={16} /></MagneticButton>
+                <MagneticButton className="hover:text-vast-accent transition-colors" onClick={() => window.open("https://www.youtube.com/@Vast-qa", "_blank", "noopener,noreferrer")}><Youtube size={16} /></MagneticButton>
               </div>
             </div>
           </div>
