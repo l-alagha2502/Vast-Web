@@ -21,6 +21,7 @@ jobs:
       - name: Build with Secrets
         # We add the --emptyOutDir flag just to be safe
         run: npx vite build
+        run: cp -r a dist/
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           
