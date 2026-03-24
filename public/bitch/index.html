@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitch|Vast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div id="enter-screen" class="enter-screen">
+        <h1 class="enter-title">𝓥𝓲𝓿𝓲𝓪𝓷</h1>
+        <p class="enter-text">Click anywhere to view profile</p>
+    </div>
+    
+    <div class="background-wrap">
+        <img src="assets/bg.gif" class="bg-gif" alt="background">
+        <div class="overlay"></div>
+    </div>
+
+    <main class="container hidden" id="main-content">
+        <header class="profile">
+            <div class="pfp-wrapper">
+                <img src="assets/pfp.png" alt="Profile Picture" class="pfp">
+                <img src="assets/crown.svg" alt="Crown" class="pfp-crown" title="Owner">
+                <div class="glow"></div>
+            </div>
+            <div class="profile-info">
+                <h1 class="username">
+                    <span class="sparkle-text">𝓥𝓲𝓿𝓲𝓪𝓷</span>
+                    <img src="assets/verified.svg" alt="Verified" class="icon-badge inline user-badge" title="Verified">
+                </h1>
+                <div class="badges">
+                    <img src="assets/artist.svg" alt="Artist" class="icon-badge tooltip" title="Artist">
+                    <img src="assets/beauty.svg" alt="Beauty" class="icon-badge tooltip" title="Beauty">
+                    <img src="assets/early-founder.svg" alt="Founder" class="icon-badge tooltip" title="Founder">
+                    <img src="assets/queen.svg" alt="Queen" class="icon-badge tooltip" title="Queen">
+                </div>
+                <p class="bio" id="typewriter-bio"></p>
+            </div>
+        </header>
+
+        <section class="social-icons">
+            <a href="https://open.spotify.com/user/31pzqrp7fwtdfetoblhixa4pugua?si=pWzwtdWdSD-hxVj2usNbzw&nd=1&dlsi=6d9697b421a244be" class="social-btn glass" target="_blank">
+                <img src="assets/spotify.svg" alt="Spotify" class="btn-icon">
+            </a>
+            <a href="https://www.snapchat.com/@jules_ambrose12" class="social-btn glass" target="_blank">
+                <img src="assets/snapchat.svg" alt="Snapchat" class="btn-icon">
+            </a>
+            <a href="https://locket.cam/jules_ambrose12" class="social-btn glass" target="_blank">
+                <img src="assets/locket.svg" alt="Locket" class="btn-icon">
+            </a>
+        </section>
+
+        <section class="widgets">
+            <a href="#" class="widget-btn glass">
+                <div class="widget-icon-wrapper">
+                    <img src="assets/vast.svg" alt="Vast" class="widget-icon">
+                </div>
+                <div class="widget-info">
+                    <span class="widget-title">Vast</span>
+                    <span class="widget-subtitle">Break the cycle</span>
+                </div>
+            </a>
+        </section>
+
+        <footer class="footer-info">
+            <div class="footer-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Qatar</span>
+            </div>
+            <div class="footer-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Jan 24, 2026</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
