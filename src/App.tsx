@@ -872,16 +872,12 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       url={url}
       position={position}
       rotation={rotation}
-      scale={hovered ? 1.15 : 1}
+      scale={hovered ? [11.5, 13.8] : [10, 12]}
       transparent
       toneMapped={false}
       onClick={() => console.log("Easter Egg: Image Node Activated")}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
-      // The Image component handles aspect ratio and cropping automatically
-      // to fit the scale provided.
-      width={22}
-      height={26}
     />
   );
 }
