@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L|Vast</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Click to enter overlay -->
+    <div id="enter-screen" class="enter-screen">
+        <div class="enter-content">
+            <h2>𝕷𝖚𝖖𝖒𝖆𝖓</h2>
+            <p>Click anywhere to view profile</p>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="video-background">
+        <!-- You can replace this with an actual video later -->
+        <div class="bg-overlay"></div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <div class="card">
+            
+            <div class="profile-layout">
+                <div class="avatar-section">
+                    <img src="assets/personal/pfp.png" alt="Avatar" class="avatar">
+                </div>
+                
+                <div class="info-section">
+                    <div class="profile-header">
+                        <h1 class="username">
+                                𝕷𝖚𝖖𝖒𝖆𝖓 𝕬𝖑𝖆𝖌𝖍𝖆
+                            <img src="assets/badges/verified.svg" alt="Verified" class="verified-icon" data-tooltip="Verified">
+                            <span class="name-particles"></span>
+                            <span class="name-particles" style="animation-delay: 1.5s; left: 20px;"></span>
+                        </h1>
+                        <div class="badges-container">
+                            <p class="badges">
+                                <span data-tooltip="Founder"><img src="assets/badges/founder.svg" alt="Founder" class="badge-icon"></span>
+                                <span data-tooltip="Staff"><img src="assets/badges/staff.svg" alt="Staff" class="badge-icon"></span>
+                                <span data-tooltip="Early Founder"><img src="assets/badges/early-founder.svg" alt="Early Founder" class="badge-icon"></span>
+                                <span data-tooltip="VIP"><img src="assets/badges/vip.svg" alt="VIP" class="badge-icon"></span>
+                                <span data-tooltip="Sports Guy"><img src="assets/badges/sports-guy.svg" alt="Sports Guy" class="badge-icon"></span>
+                                <span data-tooltip="Aetherian"><img src="assets/badges/aetherian.svg" alt="Aetherian" class="badge-icon"></span>
+                                <span data-tooltip="Artist"><img src="assets/badges/Artist.svg" alt="Artist" class="badge-icon"></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="typewriter-container">
+                        <p id="typewriter"></p>
+                    </div>
+
+                    <div class="links-container">
+                        <a href="javascript:void(0)" onclick="copyDiscord('x.vst')" class="social-link" id="discord-tooltip" data-tooltip="Discord"><img src="assets/socials/discord.svg" alt="Discord" class="social-icon"></a>
+                        <a href="https://github.com/l-alagha2502" target="_blank" class="social-link"><img src="assets/socials/github.svg" alt="GitHub" class="social-icon"></a>
+                        <a href="https://www.instagram.com/pwyv.8/" target="_blank" class="social-link"><img src="assets/socials/instagram.svg" alt="Instagram" class="social-icon"></a>
+                        <a href="https://wa.me/33820466" target="_blank" class="social-link"><img src="assets/socials/whatsapp.svg" alt="WhatsApp" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-container">
+                <a href="https://discord.com/invite/CcEFeHw9MN" target="_blank" class="vast-widget">
+                    <div class="widget-icon-wrapper">
+                        <img src="assets/socials/vast.svg" alt="Vast" class="widget-icon">
+                    </div>
+                    <div class="widget-text">
+                        <span class="widget-title">Vast</span>
+                        <span class="widget-sub">Break the cycle</span>
+                    </div>
+                </a>
+                
+                <a href="https://discord.com/invite/cy3t9tQbMT" target="_blank" class="vast-widget aether-widget">
+                    <div class="widget-icon-wrapper">
+                        <img src="assets/socials/aether.svg" alt="Aether" class="widget-icon">
+                    </div>
+                    <div class="widget-text">
+                        <span class="widget-title">ÆTHER'</span>
+                        <span class="widget-sub">My friend server</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="footer">
+                <div class="footer-stats">
+                    <span class="footer-item"><img src="assets/other/location.svg" alt="Location" class="footer-icon"> Qatar</span>
+                    <span class="footer-item"><img src="assets/other/calendar.svg" alt="Calendar" class="footer-icon"> Jan 22, 2026</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
