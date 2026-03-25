@@ -880,8 +880,8 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       onPointerOut={() => setHovered(false)}
       // The Image component handles aspect ratio and cropping automatically
       // to fit the scale provided.
-      width={22}
-      height={26}
+      width={36}
+      height={42}
     />
   );
 }
