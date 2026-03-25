@@ -805,7 +805,7 @@ const VastHall3D = () => {
       </div>
 
       <div className="w-full h-screen relative cursor-grab active:cursor-grabbing">
-        <Canvas shadows camera={{ position: [0, 0, 32], fov: 50 }}>
+        <Canvas shadows camera={{ position: [0, 0, 50], fov: 50 }}>
           <ambientLight intensity={1.5} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={15} color="#ffffff" />
           <pointLight position={[-10, -10, -10]} intensity={5} />
@@ -845,7 +845,7 @@ function ImageGallery3D({ images }: { images: string[] }) {
     <group>
       {images.map((url, i) => {
         const angle = (i / images.length) * Math.PI * 2;
-        const radius = 14;
+        const radius = 30;
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
         
@@ -880,8 +880,8 @@ function InteractiveImageCard({ url, position, rotation }: any) {
       onPointerOut={() => setHovered(false)}
       // The Image component handles aspect ratio and cropping automatically
       // to fit the scale provided.
-      width={10}
-      height={12}
+      width={22}
+      height={26}
     />
   );
 }
