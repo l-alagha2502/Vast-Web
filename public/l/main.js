@@ -4,9 +4,10 @@ const hoverSound = document.querySelector('#hover-sound');
 const musicToggle = document.querySelector('.music-toggle');
 const interactiveElements = document.querySelectorAll('.interactive, .badge');
 
-music.volume = 0.22;
-clickSound.volume = 0.34;
-hoverSound.volume = 0.22;
+if (music && clickSound && hoverSound && musicToggle) {
+  music.volume = 0.22;
+  clickSound.volume = 0.34;
+  hoverSound.volume = 0.22;
 
 function updateMusicButton() {
   const isPlaying = !music.paused;
@@ -63,3 +64,4 @@ window.addEventListener('wheel', (event) => {
   panels[nextIndex].scrollIntoView({ behavior: 'smooth' });
   window.setTimeout(() => { scrollLock = false; }, 700);
 }, { passive: true });
+}
