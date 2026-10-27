@@ -25,8 +25,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
           # ADD THIS NEW STEP HERE:
-      - name: Force Copy Card Folder
-        run: cp -r a dist/
+      - name: Copy Card Folder (if present)
+        run: |
+          if [ -d a ]; then
+            cp -r a dist/
+          fi
         
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
