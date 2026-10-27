@@ -5,22 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./public/favicon.png" />
     <title>Vasty</title>
-    <link rel="stylesheet" href="./src/style.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.180.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.180.0/examples/jsm/"
-        }
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-    </script>
+      body, html {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #0b0b0f;
+        color: #ffffff;
+      }
+      /* Full-screen looping video background */
+      .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.6); /* Darken slightly so links stand out */
+      }
+      /* Center layout shell */
+      .viewer-shell {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        z-index: 1;
+      }
+      /* Clean glassmorphism links container */
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(15, 15, 20, 0.75);
+        padding: 14px 28px;
+        border-radius: 9999px;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+      .links a {
+        color: #e2e8f0;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+      .links a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+      }
+      .links span {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.8rem;
+      }
+    </style>
   </head>
   <body>
+    <!-- Full-screen background video loop -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="public/joker--going-to-prison-pixel-art.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
     <main class="viewer-shell">
-      <section class="stage" aria-label="Interactive end crystal model viewer">
-        <canvas id="scene" aria-label="End crystal 3D model"></canvas>
-        <p class="loading" id="loading">Loading model...</p>
-      </section>
       <nav class="links" aria-label="Social links">
         <a href="https://discord.com/users/1418221224261193889" target="_blank" rel="noreferrer">Discord</a>
         <span aria-hidden="true">•</span>
@@ -29,6 +87,5 @@
         <a href="https://github.com/l-alagha2502" target="_blank" rel="noreferrer">Github</a>
       </nav>
     </main>
-    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
