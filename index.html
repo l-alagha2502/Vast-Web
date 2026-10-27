@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=./l/" />
     <link rel="icon" type="image/png" href="./public/favicon.png" />
     <title>Vasty</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
   </head>
   <body>
-    <p>Redirecting to <a href="./l/">Vasty</a>...</p>
+    <main class="viewer-shell">
+      <section class="stage" aria-label="Interactive end crystal model viewer">
+        <canvas id="scene" aria-label="End crystal 3D model"></canvas>
+        <p class="loading" id="loading">Loading model...</p>
+      </section>
+      <nav class="links" aria-label="Social links">
+        <a href="https://discord.com/users/1418221224261193889" target="_blank" rel="noreferrer">Discord</a>
+        <span aria-hidden="true">•</span>
+        <a href="./l/" target="_blank" rel="noreferrer">Luqa</a>
+        <span aria-hidden="true">•</span>
+        <a href="https://github.com/l-alagha2502" target="_blank" rel="noreferrer">Github</a>
+      </nav>
+    </main>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
