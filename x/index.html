@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101114" />
+    <meta name="description" content="TerranMortal - Fear The Creator." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>TerranMortal</title>
+  </head>
+  <body>
+    <video class="background-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="./assets/bg.mp4" type="video/mp4" />
+    </video>
+    <audio id="background-music" src="./assets/bg-music.mp3" autoplay loop preload="auto"></audio>
+    <audio id="click-sound" src="./assets/click.wav" preload="auto"></audio>
+    <audio id="hover-sound" src="./assets/hover.wav" preload="auto"></audio>
+
+    <main class="page-shell">
+      <section class="panel panel--profile" aria-label="TerranMortal profile">
+        <div class="profile-card glass-card">
+          <div class="profile-heading">
+            <img class="profile-picture" src="./assets/pfp.jpg" alt="TerranMortal profile picture" />
+            <div class="identity">
+              <h1>𝔍𝔲𝔡𝔤𝔢</h1>
+              <div class="badges" aria-label="Profile badges">
+                <span class="badge badge--founder" data-tooltip="Founder">
+                  <img src="./assets/badges/founder.svg" alt="Founder badge" />
+                  <span class="badge-tooltip">Founder</span>
+                </span>
+                <span class="badge badge--verified" data-tooltip="Verified">
+                  <img src="./assets/badges/verified.svg" alt="Verified badge" />
+                  <span class="verified-check" aria-hidden="true">✓</span>
+                  <span class="badge-tooltip">Verified</span>
+                </span>
+                <span class="badge badge--vip" data-tooltip="VIP">
+                  <img src="./assets/badges/vip.svg" alt="VIP badge" />
+                  <span class="badge-tooltip">VIP</span>
+                </span>
+                <span class="badge badge--danger" data-tooltip="Danger to Society">
+                  <img src="./assets/badges/danger-to-society.svg" alt="Danger to Society badge" />
+                  <span class="badge-tooltip">Danger to Society</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <p class="bio">Fear The Creator.</p>
+
+          <nav class="social-links" aria-label="Social links">
+            <a class="social-link interactive" href="https://discord.com/users/1190907951066656799" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/discord.svg" alt="" />
+              <span>Discord</span><span class="link-arrow">↗</span>
+            </a>
+            <a class="social-link interactive" href="https://www.reddit.com/user/terranmortal/" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/reddit.svg" alt="" />
+              <span>Reddit</span><span class="link-arrow">↗</span>
+            </a>
+            <a class="social-link interactive" href="https://x.com/terranmortal" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/x.svg" alt="" />
+              <span>X</span><span class="link-arrow">↗</span>
+            </a>
+          </nav>
+
+          <span class="scroll-cue" aria-hidden="true">scroll to explore <b>↓</b></span>
+        </div>
+      </section>
+
+      <section class="panel panel--details" aria-label="Quote">
+        <div class="details-card glass-card">
+          <blockquote class="quote">
+            <p>Wer mit Ungeheuern kämpft, mag zusehn, dass er nicht dabei zum Ungeheuer wird. Und wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein.</p>
+            <cite>- Friedrich Nietzsche</cite>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="interactive" href="https://vastx.app" target="_blank" rel="noreferrer">vastx.app</a>
+    </footer>
+
+    <div class="music-controls">
+      <label class="volume-control" for="music-volume">
+        <span class="visually-hidden">Music volume</span>
+        <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.22" aria-label="Music volume" />
+      </label>
+      <button class="music-toggle interactive" type="button" aria-label="Play background music" aria-pressed="false">♪</button>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
