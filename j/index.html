@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101114" />
+    <meta name="description" content="Jayla - Aller Oder Nichts." />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jayla</title>
+  </head>
+  <body>
+    <audio id="background-music" src="./assets/bg-music.mp3" autoplay loop preload="auto"></audio>
+    <audio id="click-sound" src="./assets/click.wav" preload="auto"></audio>
+    <audio id="hover-sound" src="./assets/hover.wav" preload="auto"></audio>
+
+    <main class="page-shell">
+      <section class="panel panel--profile" aria-label="Jayla profile">
+        <div class="profile-card glass-card">
+          <div class="profile-heading">
+            <img class="profile-picture" src="./assets/pfp.png" alt="Jayla profile picture" />
+            <div class="identity">
+              <h1>Jayla</h1>
+              <div class="badges" aria-label="Profile badges">
+                <span class="badge badge--founder" data-tooltip="Queen">
+                  <img src="./assets/badges/queen.svg" alt="Queen badge" />
+                  <span class="badge-tooltip">Queen</span>
+                </span>
+                <span class="badge badge--verified" data-tooltip="Verified">
+                  <img src="./assets/badges/verified.svg" alt="Verified badge" />
+                  <span class="verified-check" aria-hidden="true">✓</span>
+                  <span class="badge-tooltip">Verified</span>
+                </span>
+                <span class="badge badge--vip" data-tooltip="VIP">
+                  <img src="./assets/badges/vip.svg" alt="VIP badge" />
+                  <span class="badge-tooltip">VIP</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <p class="bio">Aller Oder Nichts</p>
+
+          <nav class="social-links" aria-label="Social links">
+            <a class="social-link interactive" href="https://discord.com/users/1476950254870986934" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/discord.svg" alt="" />
+              <span>Discord</span><span class="link-arrow">↗</span>
+            </a>
+            <a class="social-link interactive" href="https://www.snapchat.com/@jules_ambrose12?share_id=biv4uJxot9w&amp;locale=en-US" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/snapshot.svg" alt="" />
+              <span>Snapshot</span><span class="link-arrow">↗</span>
+            </a>
+            <a class="social-link interactive" href="https://locket.cam/jules_ambrose12" target="_blank" rel="noreferrer">
+              <img src="./assets/social-links/locket.svg" alt="" />
+              <span>Locket</span><span class="link-arrow">↗</span>
+            </a>
+          </nav>
+
+          <span class="scroll-cue" aria-hidden="true">scroll to explore <b>↓</b></span>
+        </div>
+      </section>
+
+      <section class="panel panel--details" aria-label="Skills and projects">
+        <div class="details-card glass-card">
+          <div class="details-copy">
+            <p class="section-kicker">A little more about me</p>
+            <h2>My skills<br /><em>&amp; Interests</em></h2>
+            <ol class="skills-list">
+              <li>Robotics</li>
+              <li>Handball</li>
+              <li>Reader</li>
+              <li>Author</li>
+              <li>Online therapist</li>
+              <li>Biomedical Engineer</li>
+            </ol>
+          </div>
+
+          <div class="server-column">
+            <a class="server-card interactive" href="https://discord.gg/DPmcTX2ne" target="_blank" rel="noreferrer">
+              <img src="./assets/server-icons/kxk.png" alt="kxk.lib server icon" />
+              <span>kxʞ.lib</span>
+              <span class="link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="interactive" href="https://vastx.app" target="_blank" rel="noreferrer">vastx.app</a>
+    </footer>
+
+    <button class="music-toggle interactive" type="button" aria-label="Play background music" aria-pressed="false">♪</button>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
