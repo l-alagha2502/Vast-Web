@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./public/favicon.png" />
     <title>Vast — Tools by Luqa</title>
-    <meta name="description" content="Explore free web tools made by Luqa" />
+    <meta name="description" content="Explore local web tools made by Luqman (Luqa.)" />
     <style>
       * {
         box-sizing: border-box;
@@ -16,120 +16,185 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: "Courier New", Courier, monospace, -apple-system, BlinkMacSystemFont, sans-serif;
         background-color: #000000;
         color: #ffffff;
       }
       
-      /* Main layout container */
       .hub-container {
-        position: relative;
         width: 100vw;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 60px 80px;
+        padding: 6vh 7vw;
       }
 
-      /* Left side: Vertical stacked typewriter tools */
+      /* Left side: Massive horizontal tools list */
       .tools-nav {
         display: flex;
-        gap: 40px;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2vh;
       }
 
-      .vertical-link {
+      .tool-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: clamp(3rem, 7.5vw, 6.8rem);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        transition: text-shadow 0.25s ease, transform 0.25s ease;
+        min-height: 1.05em;
+      }
+
+      .tool-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 28px rgba(255, 255, 255, 0.9), 0 0 60px rgba(255, 255, 255, 0.4);
+        transform: translateX(12px);
+      }
+
+      /* Blinking typewriter cursor */
+      .typing-cursor::after {
+        content: "_";
+        animation: blink 0.7s infinite;
+        margin-left: 4px;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Right side: Vertical white secondary links */
+      .secondary-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+        height: 100%;
+      }
+
+      .vertical-small-link {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-decoration: none;
         color: #ffffff;
-        font-size: 2.8rem;
-        font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: 2px;
-        transition: color 0.2s ease, text-shadow 0.2s ease;
-      }
-
-      .vertical-link span {
-        display: block;
-        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: 3px;
         text-transform: uppercase;
+        transition: text-shadow 0.25s ease, opacity 0.25s ease;
+        opacity: 0.85;
       }
 
-      .vertical-link:hover {
-        color: #38bdf8;
-        text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+      .vertical-small-link span {
+        display: block;
+        min-height: 1.1em;
       }
 
-      /* Right side: Smaller secondary links */
-      .secondary-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        align-items: flex-end;
+      .vertical-small-link:hover {
+        opacity: 1;
+        text-shadow: 0 0 16px rgba(255, 255, 255, 0.95);
       }
 
-      .secondary-nav a {
-        color: #94a3b8;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 400;
-        transition: color 0.2s ease;
-      }
-
-      .secondary-nav a:hover {
-        color: #ffffff;
-      }
-
-      /* Responsive fallback for smaller screens */
-      @media(max-width: 900px) {
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
         .hub-container {
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          gap: 40px;
-          padding: 30px;
+          padding: 40px 24px;
         }
-        .tools-nav {
-          flex-wrap: wrap;
-          gap: 20px;
-        }
-        .vertical-link {
-          font-size: 1.8rem;
+        .tool-link {
+          font-size: clamp(2.4rem, 11vw, 3.8rem);
         }
         .secondary-nav {
-          align-items: flex-start;
-          flex-direction: row;
-          gap: 20px;
+          gap: 16px;
+        }
+        .vertical-small-link {
+          font-size: 0.75rem;
+          letter-spacing: 2px;
         }
       }
     </style>
   </head>
   <body>
     <main class="hub-container">
-      <!-- Left Section: Vertical Stacked Tools -->
+      <!-- Left Section: Big Horizontal Tools -->
       <nav class="tools-nav" aria-label="Main Tools">
-        <a href="https://mawaqit.vastx.app" class="vertical-link" data-text="MAWAQIT">MAWAQIT</a>
-        <a href="https://draft.vastx.app" class="vertical-link" data-text="DRAFT">DRAFT</a>
-        <a href="https://scribe.vastx.app" class="vertical-link" data-text="SCRIBE">SCRIBE</a>
-        <a href="https://kxk.vastx.app" class="vertical-link" data-text="KXK">KXK</a>
+        <a href="https://mawaqit.vastx.app" class="tool-link" data-text="MAWAQIT">MAWAQIT</a>
+        <a href="https://draft.vastx.app" class="tool-link" data-text="DRAFT">DRAFT</a>
+        <a href="https://scribe.vastx.app" class="tool-link" data-text="SCRIBE">SCRIBE</a>
+        <a href="https://kxk.vastx.app" class="tool-link" data-text="KXK">KXK</a>
       </nav>
 
-      <!-- Right Section: Smaller Links -->
+      <!-- Right Section: Vertical White Secondary Links -->
       <nav class="secondary-nav" aria-label="Secondary Links">
-        <a href="https://lqmn.page" target="_blank" rel="noreferrer">My Portfolio</a>
-        <a href="https://github.com/l-alagha2502" target="_blank" rel="noreferrer">My Github</a>
+        <a href="https://lqmn.page" target="_blank" rel="noreferrer" class="vertical-small-link" data-text="MY PORTFOLIO">MY PORTFOLIO</a>
+        <a href="https://github.com/l-alagha2502" target="_blank" rel="noreferrer" class="vertical-small-link" data-text="MY GITHUB">MY GITHUB</a>
       </nav>
     </main>
 
     <script>
-      // Clean typewriter letter stack transformation
-      document.querySelectorAll('.vertical-link').forEach(link => {
-        const text = link.getAttribute('data-text');
-        link.innerHTML = text.split('').map(char => `<span>${char === ' ' ? '&nbsp;' : char}</span>`).join('');
-      });
+      const mainLinks = Array.from(document.querySelectorAll('.tool-link'));
+      const sideLinks = Array.from(document.querySelectorAll('.vertical-small-link'));
+
+      // Clear text visually right before typing starts (HTML still has text for SEO bots)
+      mainLinks.forEach(el => el.textContent = '');
+      sideLinks.forEach(el => el.innerHTML = '');
+
+      function typeHorizontal(elements, speed = 55) {
+        let elIndex = 0;
+        let charIndex = 0;
+
+        function step() {
+          if (elIndex >= elements.length) return;
+          const currentEl = elements[elIndex];
+          const fullText = currentEl.getAttribute('data-text');
+
+          currentEl.classList.add('typing-cursor');
+
+          if (charIndex < fullText.length) {
+            currentEl.textContent += fullText[charIndex];
+            charIndex++;
+            setTimeout(step, speed);
+          } else {
+            currentEl.classList.remove('typing-cursor');
+            elIndex++;
+            charIndex = 0;
+            setTimeout(step, 90);
+          }
+        }
+        step();
+      }
+
+      function typeVertical(elements, speed = 35) {
+        elements.forEach((el, idx) => {
+          const fullText = el.getAttribute('data-text');
+          let charIndex = 0;
+
+          setTimeout(() => {
+            const interval = setInterval(() => {
+              if (charIndex < fullText.length) {
+                const char = fullText[charIndex];
+                const span = document.createElement('span');
+                span.innerHTML = char === ' ' ? '&nbsp;' : char;
+                el.appendChild(span);
+                charIndex++;
+              } else {
+                clearInterval(interval);
+              }
+            }, speed);
+          }, idx * 250);
+        });
+      }
+
+      // Run both animations simultaneously on load
+      typeHorizontal(mainLinks, 50);
+      typeVertical(sideLinks, 35);
     </script>
   </body>
 </html>
